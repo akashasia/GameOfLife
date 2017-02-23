@@ -35,7 +35,6 @@ class Grid:
 		neighbors = []
 
 		if x - 1 >= 0 and y - 1 >= 0:
-
 			neighbors.append(self.grid[y - 1][x - 1])
 		if x - 1 >= 0:
 			neighbors.append(self.grid[y][x - 1])
@@ -115,6 +114,8 @@ if __name__ == "__main__":
 
 	# Initialize ncurses
 	screen = curses.initscr()
+	# Make the cursor invisible
+	curses.curs_set(0)
 	screen.clear()
 	# Add a border
 	screen.border(0)
